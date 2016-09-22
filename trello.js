@@ -1,19 +1,30 @@
 window.addEventListener("load", function(){
 	var caja = document.getElementById("caja");
-	var ocultar = document.getElementById("oculto");
+	var div1 = document.getElementById("div1");
 	var placeholder = document.getElementById("placeholder");
-	caja.addEventListener("mouseover", agregaColor);
-	caja.addEventListener("mouseout", quitarColor);
+	var boton = document.getElementById("boton");
+	var texto = document.getElementById("texto");
+	var icon = document.getElementById("icon");
+	
+	div1.classList.add("ocultar");
 	caja.addEventListener("click", mostrar);
-	function agregaColor(){
-		caja.classList.add("cambiocolor");
-	};
-	function quitarColor(){
-		caja.classList.remove("cambiocolor");
-	};
-	// var cajaoculta = document.createElement("div").appendchild(caja);
 	function mostrar(){
 		placeholder.classList.add("ocultar");
-		ocultar.classList.add("mostrar");
+		div1.classList.remove("ocultar");
+	};
+	boton.addEventListener("click", imprimir);
+	function imprimir(){
+		boton.style.display="none";
+        texto.style.display="none";
+		valor = document.getElementById("texto").value;
+		var contenedor = document.createElement("div");
+		contenedor.innerHTML = valor;
+		caja.insertBefore(contenedor,caja.childNodes[0]);
+		var link = document.createElement("a"); 
+		caja.insertBefore(link, caja.childNodes[1]);
+		var txt = document.createTextNode("Añadir una tarjeta..."); 
+		link.appendChild(txt);
+		link.setAttribute("href","#");
+		icon.classList.add("ocultar");
 	};
 });

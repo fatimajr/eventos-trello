@@ -1,0 +1,39 @@
+body{
+    font-family: sans-serif;
+    font-weight: bold;
+}
+#caja{
+	height: auto;
+	width: 240px;
+    min-height: 30px;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background 85ms ease-in,opacity 40ms ease-in,border-color 85ms ease-in;
+    background: orange;
+    cursor: pointer;
+}
+#placeholder{
+	padding: 7px;
+    color: rgba(255,255,255,.7);
+}
+.ocultar{
+	display: none;
+}
+.mostrar{
+	display: block;
+}
+#texto{
+    width: 98%;
+    display: block;
+}
+#boton{
+    display: inline-block;
+    margin-top: 2px;
+    background: -webkit-linear-gradient(top,#61BD4F 0,#5AAC44 100%);
+    background: linear-gradient(to bottom,#61BD4F 0,#5AAC44 100%);
+    box-shadow: 0 1px 0 #3F6F21;
+    color: #fff;
+}
+/*#caja:hover{
+    background-color: black;
+}*/
