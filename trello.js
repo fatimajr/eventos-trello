@@ -21,6 +21,7 @@ window.addEventListener("load", function(){
 		contenedor.innerHTML = valor;
 		caja.insertBefore(contenedor,caja.childNodes[0]);
 		var link = document.createElement("a"); 
+		link.setAttribute("id","tarjeta");
 		caja.insertBefore(link, caja.childNodes[1]);
 		var txt = document.createTextNode("Añadir una tarjeta..."); 
 		link.appendChild(txt);
@@ -28,3 +29,17 @@ window.addEventListener("load", function(){
 		icon.classList.add("ocultar");
 	};
 });
+// link.addEventListener("click",tarjeta);
+	// function tarjeta(){
+	// 	newdiv = document.createElement("div");
+	// 	document.body.appendChild(newdiv);
+	// }
+
+// caja.addEventListener("mouseover", agregaColor);
+// caja.addEventListener("mouseout", quitarColor);
+// function agregaColor(){
+// 	// 	caja.classList.add("cambiocolor");
+// 	// };
+// 	// function quitarColor(){
+// 	// 	caja.classList.remove("cambiocolor");
+// 	// };
