@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<title>Eventos - Trello</title>
-	<link rel="stylesheet" type="text/css" href="css/app.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-	<nav></nav>
-	<form action="#" id="caja">
-		<span id="placeholder">Añadir lista...</span>
-		<div id="div1">
-			<input id="texto" type="text" placeholder="Añadir lista...">
-			<button type="button" id="boton">Guardar</button>
-			<i id="icon" class="icon-cross"></i>
+	<div id="contenedor" class="contenedor">
+		<div id="tarjeta" class="tarjeta">
+			<form action="#" id="form">
+				<input id="entrada" type="text" placeholder="Añadir lista..." class="entrada form-control">
+				<button type="submit" id="boton1" class="boton1 btn">Guardar</button>
+				<span class="glyphicon glyphicon-remove" aria-hidden="true" id="icon"></span>
+			</form>
+			<span id="span">Añadir lista...</span>
 		</div>
-	</form>
-	<script type='text/javascript' src='trello.js'></script>
+	</div>
+	<script type='text/javascript' src='js/main.js'></script>
 </body>
 </html>
